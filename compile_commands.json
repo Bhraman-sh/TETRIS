@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/bhraman/Projects/Raylib",
+  "command": "/usr/bin/c++  -I/home/bhraman/Projects/Raylib/include -I/home/bhraman/raylib/src -std=gnu++17 -o CMakeFiles/raylib.dir/main.cpp.o -c /home/bhraman/Projects/Raylib/main.cpp",
+  "file": "/home/bhraman/Projects/Raylib/main.cpp"
+},
+{
+  "directory": "/home/bhraman/Projects/Raylib",
+  "command": "/usr/bin/c++  -I/home/bhraman/Projects/Raylib/include -I/home/bhraman/raylib/src -std=gnu++17 -o CMakeFiles/raylib.dir/src/grid.cpp.o -c /home/bhraman/Projects/Raylib/src/grid.cpp",
+  "file": "/home/bhraman/Projects/Raylib/src/grid.cpp"
+},
+{
+  "directory": "/home/bhraman/Projects/Raylib",
+  "command": "/usr/bin/c++  -I/home/bhraman/Projects/Raylib/include -I/home/bhraman/raylib/src -std=gnu++17 -o CMakeFiles/raylib.dir/src/square.cpp.o -c /home/bhraman/Projects/Raylib/src/square.cpp",
+  "file": "/home/bhraman/Projects/Raylib/src/square.cpp"
+},
+{
+  "directory": "/home/bhraman/Projects/Raylib",
+  "command": "/usr/bin/c++  -I/home/bhraman/Projects/Raylib/include -I/home/bhraman/raylib/src -std=gnu++17 -o CMakeFiles/raylib.dir/src/tetrimino.cpp.o -c /home/bhraman/Projects/Raylib/src/tetrimino.cpp",
+  "file": "/home/bhraman/Projects/Raylib/src/tetrimino.cpp"
+}
+]
