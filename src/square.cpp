@@ -65,5 +65,3 @@ void Square::reverse(Grid_Position pivot)
     pos.setGridX(x_o + dy);
     pos.setGridY(y_o - dx);
 }
-
-bool Square::boxes[20][10] = {false};

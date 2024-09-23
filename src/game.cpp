@@ -3,7 +3,7 @@
 Game::Game(int screenWidth, int screenHeight) : grid(screenWidth, screenHeight)
 {
     InitWindow(screenWidth, screenHeight, "Tetris");
-    block = new I_Block(grid);
+    block = new Square_Block(grid);
 }
 
 void Game::run()
@@ -17,13 +17,13 @@ void Game::run()
         handleInputs();
 
         double time2 = GetTime();
-        if (time2 - time1 >= 0.5)
+        if (time2 - time1 >= 0.2)
         {
             time1 = time2;
             if(block->fall())
             {
                 delete block;
-                block = new I_Block(grid);
+                block = new Square_Block(grid);
             }
         }
  

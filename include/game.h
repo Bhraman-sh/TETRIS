@@ -15,7 +15,7 @@ private:
     Grid grid;
 
     // Game
-    I_Block *block;
+    Tetrimino *block;
 };
 
 #endif

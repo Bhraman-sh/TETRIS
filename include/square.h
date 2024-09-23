@@ -16,7 +16,6 @@ public:
     void reverse(Grid_Position pivot);
     Grid_Position getPos() { return pos; };
 private:
-    static bool boxes[20][10];
     Grid_Position pos;
     int length;
 };
