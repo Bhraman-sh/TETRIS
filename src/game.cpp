@@ -1,9 +1,9 @@
 #include "game.h"
 
-Game::Game(int screenWidth, int screenHeight) : grid(screenWidth, screenHeight)
+Game::Game(int screenWidth, int screenHeight) : grid(screenWidth, screenHeight), gen(std::random_device{}())
 {
     InitWindow(screenWidth, screenHeight, "Tetris");
-    block = new Square_Block(grid);
+    generateBlock();
 }
 
 void Game::run()
@@ -23,10 +23,39 @@ void Game::run()
             if(block->fall())
             {
                 delete block;
-                block = new Square_Block(grid);
+                generateBlock();
             }
         }
  
+    }
+}
+
+void Game::generateBlock()
+{
+    std::uniform_int_distribution<> dis(1, 3);
+    int a = dis(gen);
+
+    std::cout << a << std::endl;
+
+    switch (a)
+    {
+        case (1):
+            block = new I_Block(grid);
+            std::cout << "i block" << std::endl;
+            break;
+
+        case (2):
+            block = new Square_Block(grid);
+            std::cout << "square block" << std::endl;
+            break;
+
+        case (3):
+            block = new Z_Block(grid);
+            std::cout << "Z block" << std::endl;
+            break;
+
+        default:
+            break;
     }
 }
 

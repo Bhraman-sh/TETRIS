@@ -47,4 +47,13 @@ public:
 
 private:
 };
+
+class Z_Block : public Tetrimino
+{
+public:
+    Z_Block(Grid grid, int a = -1, int b = -1, int c = 0, int d = 5, int e = 4, int f = 6);
+
+private:
+};
+
 #endif

@@ -204,3 +204,4 @@ I_Block::I_Block(Grid grid ,int a, int b, int c, int d, int e, int f) : Tetrimin
 
 Square_Block::Square_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
 
+Z_Block::Z_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
