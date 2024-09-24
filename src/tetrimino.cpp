@@ -19,6 +19,7 @@ void Tetrimino::drawStaticBoxes(Grid grid)
             if (boxes[j][i])
             {
                 DrawRectangle(x + i * l, y + j * l, l, l, BLUE);
+                DrawRectangleLines(x + i * l, y + j * l, l, l, WHITE);
             }
         }
     }
@@ -132,19 +133,24 @@ void Tetrimino::checkBottom()
 
 bool Tetrimino::checkRightWall()
 {
-    if (square1.getPos().getGridX() == 9)
+    int x1 = square1.getPos().getGridX();
+    int x2 = square2.getPos().getGridX();
+    int x3 = square3.getPos().getGridX();
+    int x4 = square4.getPos().getGridX();
+
+    if (x1 == 9 || boxes[square1.getPos().getGridY()][x1 + 1])
     {
         return true;
     }
-    if (square2.getPos().getGridX() == 9)
+    if (x2 == 9 || boxes[square2.getPos().getGridY()][x2 + 1])
     {
         return true;
     }
-    if (square3.getPos().getGridX() == 9)
+    if (x3 == 9 || boxes[square3.getPos().getGridY()][x3 + 1])
     {
         return true;
     }
-    if (square4.getPos().getGridX() == 9)
+    if (x4 == 9 || boxes[square4.getPos().getGridY()][x4 + 1])
     {
         return true;
     }
@@ -154,19 +160,24 @@ bool Tetrimino::checkRightWall()
 
 bool Tetrimino::checkLeftWall()
 {
-    if (square1.getPos().getGridX() == 0)
+    int x1 = square1.getPos().getGridX();
+    int x2 = square2.getPos().getGridX();
+    int x3 = square3.getPos().getGridX();
+    int x4 = square4.getPos().getGridX();
+
+    if (x1 == 0 || boxes[square1.getPos().getGridY()][x1 - 1])
     {
         return true;
     }
-    if (square2.getPos().getGridX() == 0)
+    if (x2 == 0 || boxes[square2.getPos().getGridY()][x2 - 1])
     {
         return true;
     }
-    if (square3.getPos().getGridX() == 0)
+    if (x3 == 0 || boxes[square3.getPos().getGridY()][x3 - 1])
     {
         return true;
     }
-    if (square4.getPos().getGridX() == 0)
+    if (x4 == 0 || boxes[square4.getPos().getGridY()][x4 - 1])
     {
         return true;
     }
@@ -205,3 +216,12 @@ I_Block::I_Block(Grid grid ,int a, int b, int c, int d, int e, int f) : Tetrimin
 Square_Block::Square_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
 
 Z_Block::Z_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
+
+S_Block::S_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
+
+L_Block::L_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
+
+J_Block::J_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
+
+T_Block::T_Block(Grid grid, int a, int b, int c, int d, int e, int f): Tetrimino(grid, a, b, c, d, e, f) {}
+

@@ -34,6 +34,7 @@ void Square::draw(Grid grid)
     actual_pos_x = grid.getGridPositionX()+ length * pos.getGridX();
     actual_pos_y = grid.getGridPositionY()+ length * pos.getGridY();
     DrawRectangle(actual_pos_x, actual_pos_y, length, length, BLUE);
+    DrawRectangleLines(actual_pos_x, actual_pos_y, length, length, WHITE);
 }
 
 void Square::rotate(Grid_Position pivot)

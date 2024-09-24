@@ -32,7 +32,7 @@ void Game::run()
 
 void Game::generateBlock()
 {
-    std::uniform_int_distribution<> dis(1, 3);
+    std::uniform_int_distribution<> dis(1, 7);
     int a = dis(gen);
 
     std::cout << a << std::endl;
@@ -52,6 +52,26 @@ void Game::generateBlock()
         case (3):
             block = new Z_Block(grid);
             std::cout << "Z block" << std::endl;
+            break;
+
+        case (4):
+            block = new S_Block(grid);
+            std::cout << "S block" << std::endl;
+            break;
+
+        case (5):
+            block = new L_Block(grid);
+            std::cout << "Z block" << std::endl;
+            break;
+
+        case (6):
+            block = new L_Block(grid);
+            std::cout << "L block" << std::endl;
+            break;
+
+        case (7):
+            block = new T_Block(grid);
+            std::cout << "T block" << std::endl;
             break;
 
         default:
