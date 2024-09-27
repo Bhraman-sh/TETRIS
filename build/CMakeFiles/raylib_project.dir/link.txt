@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/raylib_project.dir/main.cpp.o CMakeFiles/raylib_project.dir/src/grid.cpp.o -o raylib_project  -Wl,-rpath,/home/bhraman/raylib/build/raylib /home/bhraman/raylib/build/raylib/libraylib.so -lpthread -ldl -lm -lrt -lX11 

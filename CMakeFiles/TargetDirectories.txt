@@ -1,3 +1,0 @@
-/home/bhraman/Projects/Raylib/CMakeFiles/raylib.dir
-/home/bhraman/Projects/Raylib/CMakeFiles/edit_cache.dir
-/home/bhraman/Projects/Raylib/CMakeFiles/rebuild_cache.dir
