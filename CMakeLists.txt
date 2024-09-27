@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the project name and version
-project(raylib VERSION 1.0)
+project(tetris VERSION 1.0)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -15,16 +15,16 @@ set(RAYLIB_INCLUDE_DIR /home/bhraman/raylib/src)   # Path to raylib headers
 file(GLOB_RECURSE SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
 # Add executable target (main.cpp in root + sources from src/)
-add_executable(raylib main.cpp ${SOURCES})
+add_executable(tetris main.cpp ${SOURCES})
 
 # Add the include directory for the project's headers
-target_include_directories(raylib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(tetris PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Add Raylib's include directory
-target_include_directories(raylib PUBLIC ${RAYLIB_INCLUDE_DIR})
+target_include_directories(tetris PUBLIC ${RAYLIB_INCLUDE_DIR})
 
 # Link Raylib's shared library (.so) and other required libraries
-target_link_libraries(raylib ${RAYLIB_DIR}/libraylib.so pthread dl m rt X11)
+target_link_libraries(tetris ${RAYLIB_DIR}/libraylib.so pthread dl m rt X11)
 
 # Optionally, set output directory for the executable
 #set_target_properties(raylib_project PROPERTIES
